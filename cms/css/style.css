@@ -1,0 +1,1540 @@
+﻿/*css
+Editores: Magno, Bruna, Bruno, Lucas, William
+Data da primeira modificação: 19/03/2018
+Data da ultima modificação: 14/04/2018
+Obs: Sistema de Gerenciamento do Site
+*/
+
+/*Conteudo do site*/
+body{
+  margin: 0px;
+  padding: 0px;
+  overflow-y: hidden;
+  font-family: sans-serif;
+  font-size: 1.0em;
+}#
+
+a{
+  text-decoration: none;
+  padding: 0px;
+  margin: 0px;
+}
+/*Container principal que segura do conteudo*/
+.container_cms{
+  width:100%;
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  overflow-y: hidden;
+}
+/*Cabeçalho do sistema*/
+header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 50px;
+  background-color: #0B614B;
+}
+/*area do logo da empresa*/
+.header-content{
+  /* display: flex;
+  flex-direction: row; */
+  width: auto;
+  /* align-items: center; */
+  /*height: 10vh;*/
+  height: inherit;
+
+  /*float: left;*/
+  /*margin-right: 53%;*/
+}
+
+
+.logout{
+  width: 100px;
+  height: 25px;
+  float: left;
+
+  margin-right: 30px;
+  margin-top: 3vh;
+  border-radius: 10px;
+}
+
+.text_user{
+  width: 180px;
+  font-family: sans-serif;
+  font-size: 18px;
+    color:white;
+}
+
+.img_user{
+  width: 50px;
+  height: 50px;
+}
+/*menu lateral do sistema*/
+nav{
+  width: 200px;
+  height: 100%;
+  background-color: #1F405E;
+  user-select: none;
+}
+
+.nav_title{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid green;
+  border-bottom: solid 1px #0B614B;
+}
+.nav_title img{
+  width: 30px;
+  height: 30px;
+
+}
+.mainmenu, .submenu {
+  /*text-align:center;*/
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.mainmenu a {
+  overflow: hidden;
+  display: block;
+  text-decoration: none;
+  font-family: sans-serif;
+  color: #fff;
+  font-size: 15px;
+  margin: 10px;
+}
+.mainmenu li:hover .submenu {
+    display: block;
+    max-height: 1000px;
+}
+
+.submenu-show{
+  display:block;
+  max-height: 1000px;
+}
+
+.submenu {
+    overflow: hidden;
+    background-color: #0B614B;
+    max-height: 0px;
+    -webkit-transition: all 1s ease-out;
+}
+
+.submenu ul {
+  margin: 0px;
+  padding: 0px;
+  background-color: #458665;
+}
+
+.submenu li{
+  color:;
+  margin: 0px;
+  padding: 2px;
+}
+
+.submenu ul li a{
+  width:100%;
+  height: 100%;
+}
+
+.submenu li:hover{
+  background-color: #458665;
+}
+
+/*Conteudo que aparecera a partir da opção d menu lateral*/
+#main{
+  height: auto;
+  background-color: #fff;
+  display: block;
+  /* overflow-x: hidden; */
+  width: 100%;
+}
+/*Duvidas Frequentes*/
+/*layout*/
+.abas{
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+  width: 100%;
+  height: 35px;
+  border-bottom: solid 1px rgba(0,0,0,0.4);
+}
+
+.labels{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 30px;
+  background-color: #c3c3c3;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  margin-top: 5px;
+  margin-left: 5px;
+  color: #4d9b61;
+  margin-bottom:-5px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.title_page{
+  font-size: 20px;
+  font-family: sans-serif;
+  color: #084B8A;
+  margin-left: 60%;
+  margin-top: 10px;
+  font-weight: bold;
+  min-width: 200px;
+  width: auto;
+}
+
+.top-margin{
+  margin-top: 30px;
+}
+/*cadastro*/
+.cadastro_duvida{
+  width: 550px;
+  height: 320px;
+  background-color: #fff;
+  margin: auto;
+  margin-top: 30px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+  padding-top: 10px;
+}
+.text_duvida{
+  text-align: center;
+  margin-top: 25px;
+  font-size: 15px;
+  font-family: sans-serif;
+  color: #084B8A;
+}
+
+.box_duvida{
+  margin-left: 15%;
+  border-radius: 10px;
+  width: 70%;
+  height: 25px;
+}
+
+.box_area{
+  margin-left: 15%;
+  border-radius: 10px;
+  width: 70%;
+  height: 100px;
+}
+.salvar_duvida{
+  width: 25%;
+  height: 30px;
+  margin-left: 37.5%;
+  margin-top: 20px;
+  border-radius: 15px;
+  background-color: #084B8A;
+}
+/*lista*/
+.lista_duvida{
+  background-color: #084B8A;
+  width: 70%;
+  height: 40px;
+  margin: auto;
+  margin-top: 10px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.item_duvida{
+  width: 24.6%;
+  height: 40px;
+  float: left;
+  color: #fff;
+  line-height: 40px;
+  text-align: center;
+  font-size: 18px;
+  font-family: sans-serif;
+}
+.container_lista_duvidas{
+  width: 70%;
+  height: 40px;
+  margin: auto;
+  margin-top: 10px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.itens_mostrar_duvidas{
+  width: 24%;
+  height: 50px;
+  float: left;
+  margin-left:4px;
+  font-size: 16px;
+  font-family: "opensansbold";
+  text-align: center;
+  line-height: 40px;
+  border: 1px #fff solid;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+}
+/*Frotas*/
+.cadastro_frotas{
+  width: 550px;
+  height: 300px;
+  background-color: #fff;
+  margin: auto;
+  margin-top: 10px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+}
+.text_frotas{
+  text-align: center;
+  color: #084B8A;
+  font-size: 15px;
+  font-family: sans-serif;
+  margin-top: 15px;
+}
+.box_frotas{
+  width: 60%;
+  height: 25px;
+  margin-left: 20%;
+  border-radius: 10px;
+}
+.inpt_foto{
+  display: none;
+}
+.img_frotas{
+  width: 20%;
+  height: 100px;
+  margin-left: 40%;
+}
+.salvar_frota{
+  margin-top: 15px;
+  width: 24%;
+  height: 30px;
+  margin-left: 38%;
+  border-radius: 15px;
+  background-color: #084B8A;
+}
+/*lista*/
+.lista_frotas{
+  background-color: #084B8A;
+  width: 60%;
+  height: 40px;
+  margin: auto;
+  margin-top: 10px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.item_frotas{
+  width: 33%;
+  height: 40px;
+  float: left;
+  color: #fff;
+  line-height: 40px;
+  text-align: center;
+  font-size: 18px;
+  font-family: sans-serif;
+}
+.container_lista_frotas{
+  width: 60%;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+}
+.itens_mostrar_frotas{
+  width: 32%;
+  height: 50px;
+  float: left;
+  margin-left:4px;
+  font-size: 16px;
+  font-family: "opensansbold";
+  text-align: center;
+  line-height: 40px;
+  border: 1px #fff solid;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+}
+/*Home*/
+.cadastro_home{
+  width: 50%;
+  height: 380px;
+  background-color: #fff;
+  margin: auto;
+  margin-top: 30px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+}
+.text_home{
+  font-size: 15px;
+  font-family: sans-serif;
+  margin-top: 13px;
+  text-align: center;
+  color: #084B8A;
+}
+
+.box_home{
+  width: 80%;
+  margin-left: 10%;
+  height: 25px;
+  border-radius: 10px;
+}
+.select_home{
+  width: 44%;
+  margin-left: 28%;
+  height: 25px;
+  border-radius: 10px;
+}
+
+.salvar_home{
+  width: 24%;
+  height: 30px;
+  margin-top: 20px;
+  margin-left: 38%;
+  border-radius: 15px;
+  background-color: #084B8A;
+}
+/*lista*/
+.lista_home{
+  background-color: #084B8A;
+  width: 70%;
+  height: 40px;
+  margin: auto;
+  margin-top: 10px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.item_home{
+  width: 25%;
+  height: 40px;
+  float: left;
+  color: #fff;
+  line-height: 40px;
+  text-align: center;
+  font-size: 18px;
+  font-family: sans-serif;
+}
+.container_lista_home{
+  width: 70%;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+}
+.itens_mostrar_home{
+  width: 24.2%;
+  height: 50px;
+  float: left;
+  margin-left:4px;
+  font-size: 16px;
+  font-family: "opensansbold";
+  text-align: center;
+  line-height: 40px;
+  border: 1px #fff solid;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+}
+/* Cadastro de tipo de destino */
+.cadastro_destino{
+  width: 45%;
+  height: 200px;
+  background-color: #fff;
+  float: left;
+  margin-left: 4%;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+  margin-top: 10px;
+}
+/*Interacao*/
+/*lista*/
+.lista_interacao{
+  background-color: #084B8A;
+  width: 75%;
+  height: 40px;
+  margin: auto;
+  margin-top: 10px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.item_interacao{
+  width: 19.6%;
+  height: 40px;
+  float: left;
+  color: #fff;
+  line-height: 40px;
+  text-align: center;
+  font-size: 18px;
+  font-family: sans-serif;
+}
+.container_lista_interacao{
+  width: 75%;
+  height: 40px;
+  margin: auto;
+  margin-top: 10px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.itens_mostrar_interacao{
+  width: 19%;
+  height: 50px;
+  float: left;
+  margin-left:4px;
+  font-size: 16px;
+  font-family: "opensansbold";
+  text-align: center;
+  line-height: 40px;
+  border: 1px #fff solid;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+}
+/*Pagina Postos_Rodoviarios*/
+.cadastro_postos{
+  width: 60%;
+  height: 370px;
+  background-color: #fff;
+  margin: auto;
+  margin-top: 30px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+}
+.cont_postos1{
+  width: 50%;
+  height: 80vh;
+  float: left;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+.cont_postos2{
+  width: 50%;
+  height: 80vh;
+  float: left;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.text_postos{
+  font-size: 15px;
+  font-family: sans-serif;
+  margin-top: 13px;
+  text-align: center;
+  color: #084B8A;
+}
+
+.box_postos{
+  width: 80%;
+  margin-left: 10%;
+  height: 25px;
+  border-radius: 10px;
+}
+.select_postos{
+  width: 60%;
+  margin-left: 20%;
+  height: 25px;
+  border-radius: 10px;
+}
+.salvar_postos{
+  width: 24%;
+  height: 30px;
+  margin-top: 20px;
+  margin-left: 38%;
+  border-radius: 15px;
+  background-color: #084B8A;
+}
+/*lista*/
+.lista_postos{
+  background-color: #084B8A;
+  width: 70%;
+  height: 40px;
+  margin: auto;
+  margin-top: 10px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.item_postos{
+  width: 25%;
+  height: 40px;
+  float: left;
+  color: #fff;
+  line-height: 40px;
+  text-align: center;
+  font-size: 18px;
+  font-family: sans-serif;
+}
+.container_lista_postos{
+  width: 70%;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+}
+.itens_mostrar_postos{
+  width: 24.2%;
+  height: 50px;
+  float: left;
+  margin-left:4px;
+  font-size: 16px;
+  font-family: "opensansbold";
+  text-align: center;
+  line-height: 40px;
+  border: 1px #fff solid;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+}
+/*estados postos rodoviario*/
+.container_estados{
+  width: 45%;
+  float: left;
+}
+.list_estado{
+  background-color: #084B8A;
+  width: 100%;
+  height: 40px;
+  margin: auto;
+  margin-top: 10px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  float: left;
+}
+
+.itens_estado{
+  width: 48%;
+  height: 40px;
+  float: left;
+  color: #fff;
+  line-height: 40px;
+  text-align: center;
+  font-size: 18px;
+  font-family: sans-serif;
+}
+.container_lista_estado{
+  width: 100%;
+  height: 50px;
+  margin-top: 10px;
+}
+.itens_mostrar_estado{
+  width: 48%;
+  height: 50px;
+  float: left;
+  margin-left:4px;
+  font-size: 16px;
+  font-family: "opensansbold";
+  text-align: center;
+  line-height: 40px;
+  border: 1px #fff solid;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+}
+.cadastro_estado{
+  width: 45%;
+  height: 200px;
+  background-color: #fff;
+  float: left;
+  margin-left: 4%;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+  margin-top: 10px;
+}
+/*Sobre_Empresa*/
+/* .cadastro_empresa{
+  width: 60%;
+  height: 70vh;
+  background-color: #fff;
+  margin: auto;
+  margin-top: 50px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+} */
+.cont_text{
+  width: 50%;
+  height: 70vh;
+  float: left;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  background-color: #fff;
+}
+.cont_icons{
+  width: 50%;
+  height: 60vh;
+  float: left;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: #fff;
+}
+.text_empresa{
+  font-size: 15px;
+  font-family: sans-serif;
+  margin-top: 13px;
+  margin-left: 10%;
+  color: #084B8A;
+}
+.box_empresa{
+  width: 80%;
+  margin-left: 10%;
+  height: 25px;
+  border-radius: 10px;
+}
+.box_area{
+  width: 80%;
+  margin-left: 10%;
+  height: 60;
+  border-radius: 10px;
+}
+.salva_empresa{
+  width: 25%;
+  height: 30px;
+  margin-top: 20px;
+  margin-left: 65%;
+  border-radius: 15px;
+  background-color: #084B8A;
+}
+.title_page_posto{
+  float: left;
+  font-size: 20px;
+  margin-left: 43%;
+  font-family: sans-serif;
+  color: #084B8A;
+  margin-top: 10px;
+}
+/*lista*/
+.lista_empresa{
+  background-color: #084B8A;
+  width: 60%;
+  height: 40px;
+  margin: auto;
+  margin-top: 10px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.item_empresa{
+  width: 33%;
+  height: 40px;
+  float: left;
+  color: #fff;
+  line-height: 40px;
+  text-align: center;
+  font-size: 18px;
+  font-family: sans-serif;
+}
+.container_lista_empresa{
+  width: 60%;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+}
+.itens_mostrar_empresa{
+  width: 32%;
+  height: 50px;
+  float: left;
+  margin-left:4px;
+  font-size: 16px;
+  font-family: "opensansbold";
+  text-align: center;
+  line-height: 40px;
+  border: 1px #fff solid;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+}
+/*.inpt_foto{
+  display: none;
+}*/
+.img_empresa{
+  width: 20%;
+  height: 60px;
+  margin-left: 10%;
+}
+.icon_empresa{
+  width: 50%;
+  height: 27px;
+  margin-left: 10%;
+  border-radius: 15px;
+  background-color: #01DFD7;
+  text-align: center;
+}
+/*Cadastro de funcionarios*/
+.cadastro_funcionario{
+  width: 70%;
+  height: 670px;
+  background-color: #fff;
+  margin: auto;
+  margin-top: 10px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+}
+.cont_pessoais{
+  width: 50%;
+  height: 80vh;
+  float: left;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+.cont_endereco{
+  width: 50%;
+  height: 80vh;
+  float: left;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+.text_funcionario{
+  font-size: 15px;
+  font-family: sans-serif;
+  margin-top: 13px;
+  margin-left: 10%;
+  color: #084B8A;
+}
+.radio{
+  font-size: 15px;
+  font-family: sans-serif;
+  color: #084B8A;
+  margin-left: 10%;
+}
+.box_funcionario{
+  width: 80%;
+  margin-left: 10%;
+  height: 25px;
+  border-radius: 10px;
+}
+
+.salvar_funcionario{
+  width: 25%;
+  height: 30px;
+  margin-top: 20px;
+  margin-left: 65%;
+  border-radius: 15px;
+  background-color: #084B8A;
+}
+/*lista*/
+.lista_funcionario{
+  background-color: #084B8A;
+  width: 70%;
+  height: 40px;
+  margin: auto;
+  margin-top: 10px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.item_funcionario{
+  width: 19.6%;
+  height: 40px;
+  float: left;
+  color: #fff;
+  line-height: 40px;
+  text-align: center;
+  font-size: 18px;
+  font-family: sans-serif;
+}
+.container_lista_funcionario{
+  width: 70%;
+  height: 40px;
+  margin: auto;
+  margin-top: 10px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.itens_mostrar_funcionario{
+  width: 19%;
+  height: 50px;
+  float: left;
+  margin-left:4px;
+  font-size: 16px;
+  font-family: "opensansbold";
+  text-align: center;
+  line-height: 40px;
+  border: 1px #fff solid;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+}
+/*MODAL de edição das paginas*/
+.modal{
+	width:900px;
+	min-height:650px;
+	background-color:#ffffff;
+	margin:auto;
+  margin-top: 40px;
+}
+.modalContainer{
+	width:100%;
+	height:100%;
+	background: rgba(0, 0, 0, 0.7);
+	position:fixed;
+	display:none;
+}
+.fecharModal{
+  width: 30px;
+  height: 30px;
+  margin-left: 770px;
+  color: #af1f1f;
+}
+.tltModal{
+  width: 500px;
+  height: 20px;
+  margin: auto;
+  text-align: center;
+  font-family: "opensansbold";
+  font-size: 18px;
+  border-bottom: 1px #1f405e solid;
+  margin-bottom: 10px;
+  color:#1f405e;
+}
+/* Cadastro de onibus */
+.container_onibus{
+  height: 550px;
+  overflow-y: auto;
+}
+.cadastro_onibus{
+  width: 60%;
+  height: 450px;
+  background-color: #fff;
+  margin: auto;
+  margin-top: 3%;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+}
+.text_onibus{
+  font-size: 15px;
+  font-family: sans-serif;
+  margin-top: 13px;
+  margin-left: 10%;
+  color: #084B8A;
+}
+.box_onibus{
+  width: 80%;
+  margin-left: 10%;
+  height: 25px;
+  border-radius: 10px;
+}
+.select_onibus{
+  width: 44%;
+  margin-left: 10%;
+  height: 25px;
+  border-radius: 10px;
+}
+.salva_onibus{
+  width: 25%;
+  height: 30px;
+  margin-top: 20px;
+  margin-left: 65%;
+  border-radius: 15px;
+  background-color: #084B8A;
+}
+.title_page_posto{
+  float: left;
+  font-size: 20px;
+  margin-left: 43%;
+  font-family: sans-serif;
+  color: #084B8A;
+  margin-top: 10px;
+}
+/*lista*/
+.lista_onibus{
+  background-color:#084B8A;
+  width: 80%;
+  height: 40px;
+  margin: auto;
+  margin-top: 10px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.item_onibus{
+  width: 16.5%;
+  height: 40px;
+  float: left;
+  color: #fff;
+  line-height: 40px;
+  text-align: center;
+  font-size: 18px;
+  font-family: sans-serif;
+}
+.container_lista_onibus{
+  width: 80%;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+}
+.itens_mostrar_onibus{
+  width: 16%;
+  height: 50px;
+  float: left;
+  margin-left:4px;
+  font-size: 16px;
+  font-family: "opensansbold";
+  text-align: center;
+  line-height: 40px;
+  border: 1px #fff solid;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+}
+/* Cadastro de classe de onibus */
+.cadastro_classe{
+  width: 45%;
+  height: 200px;
+  background-color: #fff;
+  float: left;
+  margin-left: 4%;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+  margin-top: 10px;
+}
+/* Cadastro de Postos Rodoviarios */
+.cadastro_rodoviarios{
+  width: 50%;
+  height: 700px;
+  background-color: #fff;
+  margin: auto;
+  margin-top: 20px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+}
+.text_duvida{
+  text-align: center;
+  margin-top: 20px;
+  font-size: 15px;
+  font-family: sans-serif;
+  color: #084B8A;
+}
+
+.box_duvida{
+  margin-left: 15%;
+  border-radius: 10px;
+  width: 70%;
+  height: 25px;
+}
+
+.select_postos_rodoviarios{
+  width: 44%;
+  margin-left: 28%;
+  height: 25px;
+  border-radius: 10px;
+}
+.img_postos_rodoviarios{
+  width: 20%;
+  height: 100px;
+  margin-left: 40%;
+}
+.salvar_postos_rodoviarios{
+  width: 25%;
+  height: 30px;
+  margin-left: 37.5%;
+  margin-top: 20px;
+  border-radius: 15px;
+  background-color: #084B8A;
+}
+/* Pacote de Viagem */
+.cadastro_pacote_viagem{
+  width: 50%;
+  height: 65vh;
+  background-color: #fff;
+  margin: auto;
+  margin-top: 20px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+  padding-top: 10px;
+}
+.cont_vendas2{
+  width: 50%;
+  height: 65vh;
+  float: left;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+
+}
+/*lista*/
+.lista_pacote_viagem{
+  background-color: #084B8A;
+  width: 80%;
+  height: 40px;
+  margin: auto;
+  margin-top: 10px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.item_pacote_viagem{
+  width: 25%;
+  height: 40px;
+  float: left;
+  color: #fff;
+  line-height: 40px;
+  text-align: center;
+  font-size: 18px;
+  font-family: sans-serif;
+}
+.container_lista_pacote_viagem{
+  width: 80%;
+  height: 40px;
+  margin: auto;
+  margin-top: 10px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.itens_mostrar_pacote_viagem{
+  width: 24%;
+  height: 50px;
+  float: left;
+  margin-left:4px;
+  font-size: 16px;
+  font-family: "opensansbold";
+  text-align: center;
+  line-height: 40px;
+  border: 1px #fff solid;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+}
+/* Viagens*/
+.cadastro_viagem{
+  width: 50%;
+  height: 560px;
+  background-color: #fff;
+  margin: auto;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+  margin-top: 10px;
+}
+.txt_viagem{
+  font-size: 18px;
+  font-family: sans-serif;
+  text-align: center;
+  margin-top: 10px;
+  color: #084B8A;
+}
+.box_viagem{
+  width: 80%;
+  height: 27px;
+  border-radius: 10px;
+  margin-left: 10%;
+}
+.select_viagem{
+  width: 60%;
+  height: 27px;
+  border-radius: 10px;
+  margin-left: 20%;
+}
+.salvar_viagem{
+  width: 25%;
+  height: 30px;
+  margin-left: 37.5%;
+  margin-top: 20px;
+  border-radius: 15px;
+  background-color: #084B8A;
+}
+/*lista*/
+.lista_viagem{
+  background-color: #084B8A;
+  width: 85%;
+  height: 40px;
+  margin: auto;
+  margin-top: 10px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.item_viagem{
+  width: 20%;
+  height: 40px;
+  float: left;
+  color: #fff;
+  line-height: 40px;
+  text-align: center;
+  font-size: 18px;
+  font-family: sans-serif;
+}
+.container_lista_viagem{
+  width: 85%;
+  height: 40px;
+  margin: auto;
+  margin-top: 10px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.itens_mostrar_viagem{
+  width: 19%;
+  height: 50px;
+  float: left;
+  margin-left:4px;
+  font-size: 16px;
+  font-family: "opensansbold";
+  text-align: center;
+  line-height: 40px;
+  border: 1px #fff solid;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+}
+/* Motorista */
+.cadastrar_motorista{
+  width: 70%;
+  height: 500px;
+  background-color: #fff;
+  margin: auto;
+  margin-top: 2%;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+}
+/*lista*/
+.lista_motorista{
+  background-color: #084B8A;
+  width: 90%;
+  height: 40px;
+  margin: auto;
+  margin-top: 10px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.item_motorista{
+  width: 12%;
+  height: 40px;
+  float: left;
+  color: #fff;
+  line-height: 40px;
+  text-align: center;
+  font-size: 18px;
+  font-family: sans-serif;
+}
+.container_lista_motorista{
+  width: 90%;
+  height: 40px;
+  margin: auto;
+  margin-top: 10px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.itens_mostrar_motorista{
+  width: 12%;
+  height: 50px;
+  float: left;
+  font-size: 16px;
+  font-family: "opensansbold";
+  text-align: center;
+  line-height: 40px;
+  border: 1px #fff solid;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.lista_sobre_empresa{
+  background-color: #084B8A;
+  width: 90%;
+  height: 40px;
+  margin: auto;
+  margin-top: 10px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.item_sobre_empresa{
+  width: 7%;
+  height: 40px;
+  float: left;
+  color: #fff;
+  line-height: 40px;
+  text-align: center;
+  font-size: 15px;
+  font-family: sans-serif;
+}
+.container_lista_sobre_empresa{
+  width: 90%;
+  height: 40px;
+  margin: auto;
+  margin-top: 10px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.itens_mostrar_sobre_empresa{
+  width: 7%;
+  height: 40px;
+  float: left;
+  font-size: 14px;
+  font-family: "opensansbold";
+  text-align: center;
+  line-height: 40px;
+  border: 1px black solid;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+}
+
+
+/* Padrão Imagens */
+#imagem{
+  cursor: pointer;
+  width: 160px;
+  height: 160px;
+  /* margin: auto; */
+}
+
+label#imagem{
+  margin: 0px;
+  align-self: center;
+}
+
+#id_sua_img{
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 3px 4px 2px rgba(0, 0, 0, 0.4);
+  background-image: url('../../img/foto-img.png');
+  border-radius: 15px;
+  background-repeat:no-repeat;
+}
+.adicionar_imagem{
+  display: flex;
+  align-self: center;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+}
+
+#imagem2{
+  cursor: pointer;
+  width: 160px;
+  height: 160px;
+  /* margin: auto; */
+}
+
+label#imagem2{
+  margin: 0px;
+}
+
+#id_sua_img2{
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 3px 4px 2px rgba(0, 0, 0, 0.4);
+  border-radius: 15px;
+}
+.adicionar_imagem2{
+  display: flex;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+}
+
+.imagem_lista{
+  width: 100px;
+  height: 50px;
+}
+
+.input-foto{
+  display: none;
+}
+/*conteudo das paginas*/
+.conteudo{
+  width: 100%;
+  height: 82.8vh;
+  overflow y: auto;
+}
+/* Login */
+/*Conteudo de login*/
+.are_login{
+  width: 630px;
+  height: 350px;
+  background-color: #c3c3c3;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 200px;
+  /* padding-top: 20px; */
+  border-radius: 10px 10px 10px 10px;
+}
+.logo-login{
+  width: 100px;
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.titulo-login-cms{
+  width: 170px;
+  height: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  /* font-family: "opensansbold"; */
+}
+.itens-login-container{
+  width: 400px;
+  height: 180px;
+  margin: auto;
+  padding-top: 20px;
+  padding-left: 100px;
+}
+.usuario-senha-txt{
+  width: 60px;
+  height: 15px;
+  margin-left: 10px;
+  font-size: 16px;
+  /* font-family: "opensansbold"; */
+}
+.area-txt{
+  width: 300px;
+  height: 30px;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+.area-txt input{
+  width: 300px;
+}
+.btnLogin{
+  width: 60px;
+  height: 25px;
+  margin-left: 260px;
+  margin-top: 20px;
+}
+.areaMensagem{
+  width: 100%;
+  height: 30px;
+  text-align: center;
+  font-family: "opensansbold";
+  color: #960707;
+}
+
+/* Area da config de itinerario */
+#main.dragging, #main.dragging * {
+cursor: move !important;
+overflow-x:hidden;
+}
+
+#main ul, #main li{
+  cursor: all-scroll;
+  list-style: none;
+  margin: 5px 0px;
+}
+
+.dragged {
+position: absolute;
+top: 0;
+opacity: 0.5;
+z-index: 2000;
+}
+
+#main ul.simple_with_animation, #main li.placeholder {
+position: relative;
+/** More li styles **/
+}
+#main ul.simple_with_animation, #main li.placeholder:before {
+position: absolute;
+
+/*Lista de Fale Conosco*/
+.lista_faleconosco{
+  background-color: #084B8A;
+  width: 60%;
+  height: 40px;
+  margin: auto;
+  margin-top: 10px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.item_faleconosco{
+  width: 33%;
+  height: 40px;
+  float: left;
+  color: #fff;
+  line-height: 40px;
+  text-align: center;
+  font-size: 18px;
+  font-family: sans-serif;
+}
+.container_lista_faleconosco{
+  width: 60%;
+  height: 40px;
+  margin: auto;
+  margin-top: 10px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.itens_mostrar_faleconosco{
+  width: 32%;
+  height: 40px;
+  float: left;
+  margin-left:4px;
+  font-size: 16px;
+  font-family: "opensansbold";
+  text-align: center;
+  line-height: 40px;
+  border: 1px #fff solid;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+}
+
+/* Tela de Itinerario */
+/** Define arrowhead **/
+}
+
+.hold{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  height: 500px;
+  /* background-color: grey; */
+}
+.list{
+  width: 400px;
+  height: 500px;
+  padding: 0px 20px;
+  background-color: #f3f3f3;
+  border: 1px solid black;
+}
+
+.list ul{
+  padding: 5px 5px;
+  min-height: 300px;
+  background-color: #084B8A;
+  border-radius: 15px;
+}
+
+.list li{
+  width: 80%;
+  margin-top: 10px;
+  margin-left: 10%;
+  border-radius: 10px;
+  background-color: #f3f3cc;
+  user-select: none;
+
+  text-align: center;
+  font-size: 15px;
+  font-family: sans-serif;
+}
+.titulo_itinerario{
+  margin: auto;
+  font: 23px;
+  font-family: sans-serif;
+  color: #084B8A;
+}
+.select_iti{
+  width: 70%;
+  margin-left: 15%;
+  height: 25px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.salvar_iti{
+  width: 24%;
+  height: 30px;
+  margin-top: 20px;
+  margin-left: 38%;
+  border-radius: 15px;
+  background-color: #084B8A;
+}

@@ -1,0 +1,54 @@
+<?php
+  //
+  include('../links.php');
+
+  $links = alterarLinks(false);
+  $paths = alterarCaminhos(false);
+
+ ?>
+<html>
+    <head>
+        <title>Modal Login</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/style_login.css"/>
+        <script src="js/jquery-3.3.1.js" ></script>
+    </head>
+     <script>
+        $(document).ready(function() {
+          $(".fechar").click(function() {
+            $(".modalContainerLogin").fadeOut(500);
+          });
+        });
+	</script>
+
+    <body>
+      <div class="container-login center">
+        <a href="#" class="fechar" style="align-self:flex-end;">
+  	    <img src="<?php //echo($links); ?>img/icon/cancel-exit.svg" alt="sair" title="sair">
+         </a>
+         <form action="<?php //echo ($links); ?>router.php?controller=usuario&modo=login" method="post" enctype="multipart/form-data">
+           <div class="titulo-conteudo-padrao">
+             <h2>LOGIN</h2>
+           </div>
+           <div class="caixa-dados medium ">
+             <label for="login" class="">Usuario:</label>
+             <input class="login" type="text" name="txtlogin" value="">
+           </div>
+           <div class="caixa-dados medium box_senha">
+             <label for="senhaLogin">Senha:</label>
+             <input id="senhaLogin" class="box_login" type="password" name="txtsenha" value="">
+           </div>
+           <div class="itens-center">
+             <button class="btn" type="submit" name="btnlogar">Logar</button>
+           </div>
+           <div class="itens-center">
+             <img src="<?php //echo($links); ?>img/Facebook.png" alt="redes-sociais">
+           </div>
+           <div class="text-center">
+             Não tem conta ainda?
+             <a href="views/cadastro_usuario.php"><strong style="color:#162E44;">Cadastre-se</strong></a>
+           </div>
+         </form>
+       </div>
+    </body>
+</html>
